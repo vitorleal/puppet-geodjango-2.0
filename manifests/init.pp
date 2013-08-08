@@ -6,7 +6,7 @@ class geodjango {
     package {[
         "libproj-dev",
         "binutils",
-        "postgresql-9.1-postgis",
+        "postgis",
         "gdal-bin",]:
         ensure => installed,
     }
