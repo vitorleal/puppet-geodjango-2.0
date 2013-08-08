@@ -6,14 +6,15 @@ class geodjango {
     package {[
         "libproj-dev",
         "binutils",
-        "postgis",
+        "postgresql-9.1-postgis2",
         "gdal-bin",]:
         ensure => installed,
     }
 
     file {"/tmp/install-postgis.sh":
-        ensure => present,
-        source => "puppet:///modules/geodjango/create_template_postgis.sh",
-        owner => postgres
+        ensure  => present,
+        source  => "puppet:///modules/geodjango/create_template_postgis.sh",
+        owner   => postgres
+        require => Class['postgresql-9.1-postgis2']
     }
 }
