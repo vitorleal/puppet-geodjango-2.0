@@ -16,6 +16,6 @@ class geodjango {
         ensure  => present,
         source  => "puppet:///modules/geodjango/create_template_postgis.sh",
         owner   => postgres,
-        require => Class['postgresql-9.1-postgis2'];
+        require => Package['postgresql-9.1-postgis2'];
     }
 }
