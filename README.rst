@@ -1,4 +1,3 @@
-====================
 Geodjango for puppet
 ====================
 Module to create a spatial PostGIS database for use with GeoDjango_.
